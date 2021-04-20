@@ -8,7 +8,7 @@ const extract = require('extract-zip');
 
 module.exports = {
   getFullFilePath(filePath, symbol = config.symbol) {
-    const fullFilePath = path.resolve(symbol, filePath);
+    const fullFilePath = path.format(Object.assign({}, path.parse(filePath), { root: symbol + ':\\' }));
     fs.mkdirpSync(fullFilePath);
     return fullFilePath;
   },
