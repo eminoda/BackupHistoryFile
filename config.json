@@ -1,0 +1,5 @@
+{
+  "uploadPath": "/demo/upload",
+  "backupPath": "/demo/backup",
+  "symbol": "D"
+}

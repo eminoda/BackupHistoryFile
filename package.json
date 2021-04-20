@@ -1,0 +1,25 @@
+{
+  "name": "win-upload-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@192.168.2.149:30802/shixinghao/win-upload-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "archiver": "^5.3.0",
+    "extract-zip": "^2.0.1",
+    "formidable": "^1.2.2",
+    "fs-extra": "^9.1.0",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "moment": "^2.29.1"
+  }
+}
