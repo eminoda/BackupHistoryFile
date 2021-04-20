@@ -8,7 +8,8 @@ const extract = require('extract-zip');
 
 module.exports = {
   getFullFilePath(filePath, symbol = config.symbol) {
-    const fullFilePath = path.format(Object.assign({}, path.parse(filePath), { root: symbol + ':\\' }));
+    // const fullFilePath = path.format(Object.assign({}, path.parse(filePath), { root: symbol + ':\\' }));
+    const fullFilePath = symbol + path.resolve(filePath).substring(1);
     fs.mkdirpSync(fullFilePath);
     return fullFilePath;
   },
@@ -20,9 +21,9 @@ module.exports = {
     };
   },
   async removeHistoryFile({ uploadPath }) {
-    const removePath = await this.getFullFilePath(uploadPath);
-    console.log('删除路径', removePath);
-    const result = await fs.readdir(removePath);
+    // const removePath = await this.getFullFilePath(uploadPath);
+    console.log('删除路径', uploadPath);
+    const result = await fs.readdir(uploadPath);
     for (let i = 0; i < result.length; i++) {
       const fp = path.join(uploadPath, result[i]);
       fs.removeSync(fp);
