@@ -1,5 +1,13 @@
 {
-  "uploadPath": "/demo/upload",
-  "backupPath": "/demo/backup",
-  "symbol": "D"
+  "ISSPWeb_UPLOAD_PATH": "D:\\webroot\\ISSPWeb",
+  "ISSPWeb_BACKUP_PATH": "D:\\backup",
+  "CONFIG_UPLOAD_PATH": "C:\\unitrust\\config",
+  "CONFIG_BACKUP_PATH": "C:\\unitrust\\backup",
+  "servers": [
+    { "ip": "172.20.2.45", "name": "YZT_ISSP_4" },
+    { "ip": "172.20.2.34", "name": "YZT_ISSP_3" },
+    { "ip": "172.20.2.44", "name": "YZT_ISSP_2" },
+    { "ip": "172.20.2.41", "name": "YZT_ISSP_1" },
+    { "ip": "127.0.0.1", "name": "本机" }
+  ]
 }
